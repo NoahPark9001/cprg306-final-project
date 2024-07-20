@@ -68,7 +68,7 @@ export default function Page() {
         <div className="section_text">
           <p className="section_text_p2">Full-Stack Junior Developer</p>
           <p className="section_text_p1">
-            Hello, I'm Jungwon Park. A meticulous and passionate Full-Stack
+            Hello, I&apos;m Jungwon Park. A meticulous and passionate Full-Stack
             Junior Developer based in Calgary, Canada.
           </p>
           <div className="btn-container">
@@ -76,8 +76,7 @@ export default function Page() {
               className="btn btn-color-1 custom-width"
               onClick={() => (window.location.href = "#contact")}
             >
-              {" "}
-              Contact Info{" "}
+              Contact Info
             </button>
           </div>
         </div>
@@ -122,7 +121,7 @@ export default function Page() {
             </ul>
           </div>
         </nav>
-        <p>Copyright 2024 Jugnwon Park. All Rights Reserved.</p>
+        <p>Copyright 2024 Jungwon Park. All Rights Reserved.</p>
       </footer>
     </div>
   );
