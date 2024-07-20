@@ -122,7 +122,7 @@ export default function Page() {
             </ul>
           </div>
         </nav>
-        <p>Copyright &#169; 2024 Jugnwon Park. All Rights Reserved.</p>
+        <p>Copyright 2024 Jugnwon Park. All Rights Reserved.</p>
       </footer>
     </div>
   );
