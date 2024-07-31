@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function Page() {
   const toggleMenu = () => {
@@ -81,10 +82,11 @@ export default function Page() {
           </div>
         </div>
         <div className="profile_image">
-          <img
+          <Image
             src="/images/Jungwon.jpg"
             alt="Profile Image"
-            className="profile_image"
+            width={500}
+            height={500}
           />
         </div>
       </section>
@@ -98,32 +100,33 @@ export default function Page() {
               <h3>Current Studies</h3>
               <p>
                 I am currently in my third semester at SAIT, studying software
-                development. I'm a student who's really interested in software
-                development. I enjoy learning different programming languages
-                and frameworks, and I love building efficient and scalable
-                applications.
+                development. I&apos;m a student who&apos;s really interested in
+                software development. I enjoy learning different programming
+                languages and frameworks, and I love building efficient and
+                scalable applications.
               </p>
             </div>
             <div className="details-container">
               <h3>Background</h3>
               <p>
-                I've always been curious about how things work, and that
-                curiosity led me to the world of software development. I've been
-                learning technologies like JavaScript, React, and Node.js, and
-                I'm continuously striving to grow in this field.
+                I&apos;ve always been curious about how things work, and that
+                curiosity led me to the world of software development. I&apos;ve
+                been learning technologies like JavaScript, React, and Node.js,
+                and I&apos;m continuously striving to grow in this field.
               </p>
             </div>
             <div className="details-container">
               <h3>Interests</h3>
               <p>
-                I'm particularly interested in frontend development using React.
+                I&apos;m particularly interested in frontend development using
+                React.
               </p>
             </div>
             <div className="details-container">
               <h3>Future Goals</h3>
               <p>
-                I'm excited to take on new challenges and contribute to projects
-                that push the boundaries of what technology can do.
+                I&apos;m excited to take on new challenges and contribute to
+                projects that push the boundaries of what technology can do.
               </p>
             </div>
           </div>
