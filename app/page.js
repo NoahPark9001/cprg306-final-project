@@ -15,14 +15,14 @@ export default function Page() {
     {
       title: 'Study Time tracking App',
       description: 'An app to track and analyze study time for improved productivity',
-      image: 'images/studyApp.png',
+      image: '/images/studyApp.png',
       github: 'https://github.com/your-username/studytracking',
       demo: 'https://study-tracking-app.vercel.app/',
     },
     {
       title: 'Movie App',
       description: 'A website that displays lists of movies sorted by rating and release date.',
-      image: 'images/movie.png',
+      image: '/images/movie.png',
       github: 'https://github.com/Euna-kim-1/react-for-beginners',
       demo: 'https://euna-kim-1.github.io/react-for-beginners/',
     },
@@ -230,43 +230,46 @@ export default function Page() {
       </section>
 
       <section id="projects">
-  <p className="section_text_p3">Browse My Recent</p>
-  <h1 className="title">Projects</h1>
-  <div className="projects-container color-container">
-    {projects.map((project, index) => (
-      <div className="project-card" key={index}>
-        <img src={project.image} alt={`${project.title} Image`} className="project-image" />
-        <h2 className="project-title">{project.title}</h2>
-        <p className="description">{project.description}</p>
-        <div className="buttons-container">
-          <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-color-1">GitHub</a>
-          <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-color-2">Live Demo</a>
+        <p className="section_text_p3">Browse My Recent</p>
+        <h1 className="title">Projects</h1>
+        <div className="projects-container color-container">
+          {projects.map((project, index) => (
+            <div className="project-card" key={index}>
+              <Image src={project.image} alt={`${project.title} Image`} width={500} height={300} className="project-image" />
+              <h2 className="project-title">{project.title}</h2>
+              <p className="description">{project.description}</p>
+              <div className="buttons-container">
+                <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-color-1">GitHub</a>
+                <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-color-2">Live Demo</a>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    ))}
-  </div>
-</section>
-
+      </section>
 
       <section id="contact">
         <p className="section_text_p3">Get In Touch</p>
         <h1 className="title">Contact Me</h1>
         <div className="contact-info-upper-container">
           <div className="contact-info-container">
-            <img
-              src="images/gmail.png"
+            <Image
+              src="/images/gmail.png"
               alt="Email Icon"
               className="contact-icon"
+              width={50}
+              height={50}
             />
             <p>
               <strong>Email:</strong> <a href="mailto:one39567220@gmail.com">one39567220@gmail.com</a>
             </p>
           </div>
           <div className="contact-info-container">
-            <img
-              src="images/linkedin.png"
+            <Image
+              src="/images/linkedin.png"
               alt="LinkedIn Icon"
               className="contact-icon"
+              width={50}
+              height={50}
             />
             <p>
               <strong>LinkedIn:</strong>{" "}
@@ -275,7 +278,7 @@ export default function Page() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Jungwon Park's Linkedin
+                Jungwon Park&apos;s Linkedin
               </a>
             </p>
           </div>
