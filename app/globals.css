@@ -316,16 +316,85 @@ article .icon {
   cursor: default;
 }
 
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.skill {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+  height: 5px; /* Reduced height */
+}
+
+.progress {
+  height: 100%; /* Ensuring the progress fills the height */
+  border-radius: 5px;
+}
+
+.progress-bar.done .progress {
+  background-color: #4caf50; /* Green for done */
+}
+
+.progress-bar.on-hold .progress {
+  background-color: #ff9800; /* Orange for on hold */
+}
+
+.progress-bar.in-progress .progress {
+  background-color: #2196f3; /* Blue for in progress */
+}
+
+.progress-bar.not-started .progress {
+  background-color: #9e9e9e; /* Grey for not started */
+}
+
+
 /* PROJECTS SECTION */
 #projects {
   position: relative;
   border-top: 1px solid #708090;
   margin-top: 5rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .project-title {
@@ -335,17 +404,41 @@ article .icon {
   font-weight: 500;
 }
 
-.project-btn {
-  color: black;
-  border-color: rgb(163, 163, 163);
-  margin: 2px;
-}
-
 .description {
   color: rgb(85, 85, 85);
   margin-bottom: 1rem;
   font-family: "Noto Sans", sans-serif;
 }
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-color-1 {
+  background-color: #4caf50;
+}
+
+.btn-color-2 {
+  background-color: #2196f3;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  text-decoration: none;
+}
+
 
 /* CONTACT SECTION */
 #contact {
@@ -354,11 +447,14 @@ article .icon {
   flex-direction: column;
   border-top: 1px solid #708090;
   margin-top: 5rem;
+  text-align: center;
 }
 
 .contact-info-upper-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
@@ -381,9 +477,19 @@ article .icon {
 }
 
 .contact-icon {
-  cursor: default;
   height: 2rem;
 }
+
+.contact-info-container a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-info-container a:hover {
+  text-decoration: underline;
+  color: #2196f3;
+}
+
 
 /* FOOTER */
 footer {

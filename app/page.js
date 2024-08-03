@@ -11,6 +11,23 @@ export default function Page() {
     hamburgerIcon.classList.toggle("open");
   };
 
+  const projects = [
+    {
+      title: 'Study Time tracking App',
+      description: 'An app to track and analyze study time for improved productivity',
+      image: 'images/studyApp.png',
+      github: 'https://github.com/your-username/studytracking',
+      demo: 'https://study-tracking-app.vercel.app/',
+    },
+    {
+      title: 'Movie App',
+      description: 'A website that displays lists of movies sorted by rating and release date.',
+      image: 'images/movie.png',
+      github: 'https://github.com/Euna-kim-1/react-for-beginners',
+      demo: 'https://euna-kim-1.github.io/react-for-beginners/',
+    },
+  ];
+
   return (
     <div>
       <nav id="desktop-nav">
@@ -135,17 +152,134 @@ export default function Page() {
 
       <section id="experience">
         <p className="section_text_p3">Explore My</p>
-        <h1 className="title">Experience</h1>
+        <h1 className="title">Skills</h1>
+        <div className="skills-container">
+          <div className="skill">
+            <h3>The Git&GitHub Bootcamp</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: Complete</p>
+            <div className="progress-bar done">
+              <div className="progress" style={{ width: "100%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>MySQL Bootcamp</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: Done</p>
+            <div className="progress-bar done">
+              <div className="progress" style={{ width: "100%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>Java</h3>
+            <p>Platform: YouTube</p>
+            <p>Status: On Hold</p>
+            <div className="progress-bar on-hold">
+              <div className="progress" style={{ width: "70%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>Algorithm</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: In Progress</p>
+            <div className="progress-bar in-progress">
+              <div className="progress" style={{ width: "50%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>Web Bootcamp</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: In Progress</p>
+            <div className="progress-bar in-progress">
+              <div className="progress" style={{ width: "40%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>React</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: In Progress</p>
+            <div className="progress-bar in-progress">
+              <div className="progress" style={{ width: "20%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>React Native</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: On Hold</p>
+            <div className="progress-bar on-hold">
+              <div className="progress" style={{ width: "10%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>Java</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: On Hold</p>
+            <div className="progress-bar on-hold">
+              <div className="progress" style={{ width: "10%" }}></div>
+            </div>
+          </div>
+          <div className="skill">
+            <h3>Node.js</h3>
+            <p>Platform: Udemy</p>
+            <p>Status: Not Started</p>
+            <div className="progress-bar not-started">
+              <div className="progress" style={{ width: "0%" }}></div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
-        <p className="section_text_p3">Browse My Recent</p>
-        <h1 className="title">Projects</h1>
-      </section>
+  <p className="section_text_p3">Browse My Recent</p>
+  <h1 className="title">Projects</h1>
+  <div className="projects-container color-container">
+    {projects.map((project, index) => (
+      <div className="project-card" key={index}>
+        <img src={project.image} alt={`${project.title} Image`} className="project-image" />
+        <h2 className="project-title">{project.title}</h2>
+        <p className="description">{project.description}</p>
+        <div className="buttons-container">
+          <a href={project.github} target="_blank" rel="noopener noreferrer" className="btn btn-color-1">GitHub</a>
+          <a href={project.demo} target="_blank" rel="noopener noreferrer" className="btn btn-color-2">Live Demo</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
 
       <section id="contact">
         <p className="section_text_p3">Get In Touch</p>
         <h1 className="title">Contact Me</h1>
+        <div className="contact-info-upper-container">
+          <div className="contact-info-container">
+            <img
+              src="images/gmail.png"
+              alt="Email Icon"
+              className="contact-icon"
+            />
+            <p>
+              <strong>Email:</strong> <a href="mailto:one39567220@gmail.com">one39567220@gmail.com</a>
+            </p>
+          </div>
+          <div className="contact-info-container">
+            <img
+              src="images/linkedin.png"
+              alt="LinkedIn Icon"
+              className="contact-icon"
+            />
+            <p>
+              <strong>LinkedIn:</strong>{" "}
+              <a
+                href="https://www.linkedin.com/in/jungwon-noah-park/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jungwon Park's Linkedin
+              </a>
+            </p>
+          </div>
+        </div>
       </section>
 
       <footer>
